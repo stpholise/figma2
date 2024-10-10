@@ -16,7 +16,7 @@ const Trasactions = () => {
                     <p className="author">Roy Cash</p>
                 </div>
                 <div className="contRht">
-                    <h4 className="amount">USD 600</h4>
+                    <h4 className="amount">USD 6000</h4>
                     <p className="date">Apr 03,2022</p>
                 </div>
             </div>

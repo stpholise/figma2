@@ -7,7 +7,7 @@
 
 @font-face{
    font-family:'Degular';
-   src: url('fonnts.com-DegularDemo-Regular.otf') format('opentype');
+   src: url('./assets/fonnts.com-DegularDemo-Regular.otf') format('opentype');
 }
 body{
   width:100%;

@@ -1,6 +1,6 @@
 import {  useState } from 'react'
 
-const Filter = () => {
+const Filter = ({setIsOpen}) => {
 
     const transactionTypes = ["Store transaction", "Get tipped", "Withdrawals", " Chargebacks", "Cashbacks", "Refer & Earn"]
    

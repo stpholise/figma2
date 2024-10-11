@@ -35,7 +35,7 @@ function App() {
           <button>Export List <FiDownload /></button>
         </div>
       </main>
-      {show &&  <Filter/> }
+      {show &&  <Filter setIsOpen={setShow} /> }
       <Transactions/>
 
     </>

@@ -186,30 +186,35 @@ const Filter = ({setIsOpen}) => {
                                 value="Success"
                                 checked={status === 'Success'}
                                 onChange={handleStatus}
+                                id='success'
                             />
-                         <label>
+                         <label htmlFor='success'  className="checkLabel">
                             Success
                         </label>
                     </div>
                     <div>
-                        <label>
+                       
                             <input
                                 type="radio"
                                 value="Pending"
                                 checked={status === 'Pending'}
-                                onChange={handleChange}
+                                onChange={handleStatus}
+                                id='pending'
                             />
+                             <label htmlFor='pending' className="checkLabel">
                             Pending
                         </label>
                     </div>
                     <div>
-                        <label>
+                       
                             <input
                                 type="radio"
                                 value="Failure"
                                 checked={status === 'Failure'}
-                                onChange={handleChange}
+                                onChange={handleStatus}
+                                id='failure'
                             />
+                             <label htmlFor='failure'  className="checkLabel">
                             Failure
                         </label>
                     </div>

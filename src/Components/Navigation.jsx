@@ -12,10 +12,19 @@ import Chat from '../assets/chat.svg'
 import Avi from '../assets/avi.svg'
 import Menu from '../assets/menu.svg'
 
+import {useState} from 'react'
+
+
 
 
 
 const Navigation = () => {
+    const [toggleMenu, setToggleMenu] = useState(false) 
+
+    const handleMenuToggle = () => {
+        setToggleMenu(!toggleMenu)
+    }
+
   return (
     <>
         <nav className="mNav">
@@ -51,7 +60,7 @@ const Navigation = () => {
                 <div className="link">
                 <img src={Chat} alt="Notification icon" />
                 </div>
-                <div className="link toggleIcon">
+                <div className="link toggleIcon" onClick={handleMenuToggle} style={{ flexDirection: toggleMenu ? 'row-reverse': 'row'}}>
                     <div className="ball">
                         <img src={Avi} alt="" />
                     </div>

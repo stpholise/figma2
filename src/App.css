@@ -475,6 +475,18 @@ input[type='date']::-webkit-calendar-picker-indicator{
 }
 
 @media(max-width: 640px) {
+  .mNav .midNav{
+    display:none;
+  }
+  .show {
+    display:block;
+  }
+  .midNav.show{
+    display:grid;
+    position:absolute;
+    top:0;
+
+  }
   p{
     font-size:0.8rem;
   }
@@ -567,11 +579,16 @@ input[type='date']::-webkit-calendar-picker-indicator{
 .filterCont{
   padding:0.7rem;
   flex-direction: column;
-
   border-radius:1rem;
-  width:90%;
-  max-width:450px;
-  
+  width: calc(100% - 1rem);
+  height:auto;
+  max-width:600px;
+  position:fixed;
+  height:auto;
+  background:#fff;
+  top:0;
+  overflow-y:scroll;
+
 }
 
 

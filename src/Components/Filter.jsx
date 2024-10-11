@@ -1,4 +1,5 @@
 import {  useState } from 'react'
+import Close from '../assets/close.svg'
 
 const Filter = ({setIsOpen}) => {
 
@@ -16,11 +17,15 @@ const Filter = ({setIsOpen}) => {
 
 
   return (
+    <>
+    <div className="ligtBg" onClick={() => setIsOpen(false)} />
     <div className="filterCont">
         
         <div className="top">
             <h3>Filter </h3>
-            <button className="closeFilter">x</button>
+            <button className="closeFilter" onClick={()  => setIsOpen(false)}>
+                <img src={Close} alt="close" />
+            </button>
         </div>
         <div className="timeInt">
             
@@ -81,6 +86,7 @@ const Filter = ({setIsOpen}) => {
         </form>
         
     </div>
+    </>
   )
 }
 

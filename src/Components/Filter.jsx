@@ -14,6 +14,7 @@ const Filter = ({setIsOpen}) => {
 
     const handleCheckers = () => {
         setCheckers(!checkers)
+       openRadio && setOpenRadio(false)
     }
 
     const formCont = (e) =>{
@@ -24,6 +25,7 @@ const Filter = ({setIsOpen}) => {
 
     const handleRadio = () => {
         setOpenRadio(!openRadio)
+        checkers && setCheckers(false)
     }
 
     const [openDate, setOpenDate] = useState(false)
@@ -79,7 +81,7 @@ const Filter = ({setIsOpen}) => {
   return (
     <>
     <div className="ligtBg" onClick={() => setIsOpen(false)} />
-    <div className="filterCont">
+    <dialog className="filterCont">
         
         <div className="top">
             <h3>Filter </h3>
@@ -173,7 +175,7 @@ const Filter = ({setIsOpen}) => {
                         ))}
                     </span>
                     
-                    {checkers ? <img src={ExpandLess} alt='expand'/> : <img src={ExpandMore} alt='expand'/>}
+                    {openRadio ? <img src={ExpandLess} alt='expand'/> : <img src={ExpandMore} alt='expand'/>}
                     </button>
                     {openRadio &&
                     <div className="checkCont">
@@ -186,30 +188,35 @@ const Filter = ({setIsOpen}) => {
                                 value="Success"
                                 checked={status === 'Success'}
                                 onChange={handleStatus}
+                                id='success'
                             />
-                         <label>
+                         <label htmlFor='success'  className="checkLabel">
                             Success
                         </label>
                     </div>
                     <div>
-                        <label>
+                       
                             <input
                                 type="radio"
                                 value="Pending"
                                 checked={status === 'Pending'}
-                                onChange={handleChange}
+                                onChange={handleStatus}
+                                id='pending'
                             />
+                             <label htmlFor='pending' className="checkLabel">
                             Pending
                         </label>
                     </div>
                     <div>
-                        <label>
+                       
                             <input
                                 type="radio"
                                 value="Failure"
                                 checked={status === 'Failure'}
-                                onChange={handleChange}
+                                onChange={handleStatus}
+                                id='failure'
                             />
+                             <label htmlFor='failure'  className="checkLabel">
                             Failure
                         </label>
                     </div>
@@ -224,7 +231,7 @@ const Filter = ({setIsOpen}) => {
             <button className='modelBtn darkBg' onClick={() => setIsOpen(false)}>Apply</button>
         </footer>
         
-    </div>
+    </dialog>
     </>
   )
 }

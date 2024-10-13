@@ -11,19 +11,26 @@ import { useState } from 'react'
 
 
 function App() {
+  const [filterState, setFilterState] = useState(false)
 
-
-  
+   const handleFilterState =(data) =>{
+    data && setFilterState()
+   }  
 
   const [show, setShow] = useState(false)
-
+  const getMenu = (data) => { 
+    console.log(data)
+    return data
+   }
   const handleShow = ( ) =>{
     setShow(!show)
+    show && handleFilterState()
+
   }
 
   return (
     <>  
-      <Navigation/>
+      <Navigation modalToggle={setShow} filterState={filterState} handleFilterState={handleFilterState}/>
       <Hero/>
       <main className="midSec">
         <div className="midLft">
@@ -35,7 +42,9 @@ function App() {
           <button>Export List <FiDownload /></button>
         </div>
       </main>
-      {show &&  <Filter setIsOpen={setShow} /> }
+      <div className="relative">
+      {show &&  <Filter setIsOpen={setShow} getMenu={getMenu} /> }
+      </div>
       <Transactions/>
 
     </>

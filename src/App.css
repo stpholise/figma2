@@ -400,7 +400,8 @@ dialog{
 
 .dateBox{
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
+  align-items:center;
   border-radius:var(--round-btn);
   padding:0.3rem 1rem;
   background:#eff1f6;

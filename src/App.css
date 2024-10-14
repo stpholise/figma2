@@ -304,7 +304,7 @@ h1, h2, h3{
   flex-direction: column;
   position:relative;
   z-index: 80;
-  background:rgba(255, 255, 255,95%);
+  background:rgb(255, 255, 255);
   border-radius:1rem;
   width:100%;
   max-width:600px;
@@ -598,8 +598,6 @@ input[type='date']::-webkit-calendar-picker-indicator{
 }
 
 .filterCont{
-  
- 
   width:calc(100% - 2rem);
   top:50%;
   left:0%;

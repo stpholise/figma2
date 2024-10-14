@@ -698,6 +698,7 @@ dialog{
 }
   
 
+
 .block {
   justify-content:baseline;
   align-items:center;
@@ -736,6 +737,14 @@ dialog{
   margin-bottom:1rem;
 }
 
+.filterCont .dateFm{
+  gap:0.5rem;
+}
+
+.dateBox{
+  border-radius:7px;
+}
+
 .filterCont .modelFooter{
   grid-template-columns:1fr ;
   position:fixed;
@@ -748,9 +757,9 @@ dialog{
 
 .filterCont .timeInt{
   flex-wrap:wrap;
-  gap:0.5rem;
+  justify-content: flex-start;
+  gap:0.2rem;
 }
-
 
 
 .expand{
@@ -758,50 +767,46 @@ dialog{
 }
 
 
-/* FILTER */
-/* .filterCont{
-  padding:0.7rem;
-  flex-direction: column;
-  border-radius:1rem;
-  width: calc(100% - 1rem);
-  max-width:600px;
-  position:fixed;
-  height:auto;
-  background:#fff;
-  top:0;
-  overflow-y:scroll;
-  transform: translateX(-50%, -50%);
-
-} */
 
 
-/* .filterCont .top{
-  display:flex;
-  justify-content: space-between;
-  width:100%;
-} */
-/* 
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+/* =============== */
+@media (max-width: 410px) {
+  .filterCont .dateFm{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:0.2rem;
+    margin:0.3rem 0;
+  }
+
+  .filterCont .timeInt{
+    margin: 0.3rem 0;
+  }
+  
+  .dateBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    background: #eff1f6;
+    border-radius:0.4rem;
+}
+
+.dateFm input[type="date"] {
+  
+  padding: 1rem;
+  
+}
 
 .filterCont .timeInt{
-  display:flex;
-  justify-content: space-evenly;
-  width:100%;
-  margin: 1rem 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
 }
-
-.filterCont form{
-  margin-bottom:1rem;
+form{
+  padding:0.6rem 0;
 }
-
-.timeInt button{
-  padding:0.4rem 0.5rem;
-  font-size:11px;
 }
-
-
-.filterCont .modelBtn{
-  padding:0.5rem 1rem;
- 
-} */
-}
-

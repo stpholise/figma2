@@ -25,7 +25,6 @@ function App() {
   const handleShow = ( ) =>{
     setShow(!show)
     show && handleFilterState()
-
   }
 
   return (

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 
 
-const Filter = ({setIsOpen}) => {
+const Filter = ({setIsOpen, isOpen}) => {
 
     const transactionTypes = ["Store transaction", "Get tipped", "Withdrawals", " Chargebacks", "Cashbacks", "Refer & Earn"]
    
@@ -75,12 +75,13 @@ const Filter = ({setIsOpen}) => {
         }
         
     ]
-    
+
+ 
 
 
   return (
     <>
-    <div className="ligtBg" onClick={() => setIsOpen(false)} />
+    <div className="filterOverlay" style={{display: isOpen ? 'block' : 'none'}} onClick={() => setIsOpen(false)} />
     <dialog className="filterCont">
         
         <div className="top">
@@ -238,6 +239,7 @@ const Filter = ({setIsOpen}) => {
 
 Filter.propTypes = {
     setIsOpen: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired    
 }
 
 export default Filter 

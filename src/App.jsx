@@ -43,7 +43,7 @@ function App() {
         </div>
       </main>
       <div className="relative">
-      {show &&  <Filter setIsOpen={setShow} getMenu={getMenu} /> }
+      {show &&  <Filter setIsOpen={setShow} isOpen={show} getMenu={getMenu} /> }
       </div>
       <Transactions/>
 

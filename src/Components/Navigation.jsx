@@ -32,6 +32,7 @@ const Navigation = ({ modalToggle, filterState , handleFilterState }) => {
 
   return (
     <>
+        <div className="navOverlay" style={{display: toggleMenu ? 'block' : 'none'}} onClick={() => setToggleMenu(false)}></div>
         <nav className="mNav">
             <div className="logo">
             <img src={MainstackLogo} alt="mainstack logo" />

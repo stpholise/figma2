@@ -111,7 +111,7 @@ const Filter = ({setIsOpen, isOpen}) => {
                     </div>
                     <div className="finish dateBox" >
                      <label   htmlFor="finishDate" className='hideLabel'>finishDate</label>
-                     <input  onClick={handleDate1} type="date" id='finishDate' style={{padding:'0.5rem'}}/>
+                     <input  onClick={handleDate1} type="date" id='finishDate' />
                       
                     </div>
                 </div>

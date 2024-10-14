@@ -389,10 +389,8 @@ dialog{
   outline:none;
   padding:1rem;
   border-radius:12px;
-  background:#eff1f6;
+  background:transparent;
   width:100%; 
-  position:relative;
-  color:#333;
 }
 
 

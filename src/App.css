@@ -394,16 +394,6 @@ dialog{
   position:relative;
 }
 
-input[type='date']::-webkit-calendar-picker-indicator{
-  opacity: 0; 
-  cursor: pointer; 
-  position: absolute; 
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-appearance: none;
-} 
 
 
 
@@ -748,6 +738,8 @@ input[type='date']::-webkit-calendar-picker-indicator{
 
 .filterCont .modelFooter{
   grid-template-columns:1fr ;
+  position:fixed;
+  bottom:1rem;
 }
 
 .filterCont .modelFooter .modelBtn{
@@ -759,18 +751,6 @@ input[type='date']::-webkit-calendar-picker-indicator{
   gap:0.5rem;
 }
 
-input[type='date']::-webkit-calendar-picker-indicator{
-  opacity: 1;
-  cursor: pointer; 
-  position: relative; 
-  width:auto;
-  height:auto;
-  background:#eff1f6;
-  top: auto;
-  left: auto;
-  right:auto;
-  -webkit-appearance: default;
-} 
 
 
 .expand{

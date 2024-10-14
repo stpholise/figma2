@@ -31,11 +31,10 @@ const Filter = ({setIsOpen, isOpen}) => {
 
 
 
-    const handleDate = () => {
-        
-    }
+   
     const handleDate1 = () => {
        
+        console.log('date')
     }
 
     const [checkedItems, setCheckedItems] = useState({})
@@ -102,10 +101,10 @@ const Filter = ({setIsOpen, isOpen}) => {
                 <h4>Date Range</h4>
                 <div className="dateFm">
                     
-                    <div className="start dateBox" onClick={handleDate}>
+                    <div className="start dateBox" >
 
                     <label htmlFor="startDate" className='hideLabel'>start date</label>
-                    <input type="date" id='starDate' />
+                    <input onClick={handleDate1} type="date" id='starDate' />
                 
                     
 

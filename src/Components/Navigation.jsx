@@ -130,7 +130,7 @@ const Navigation = ({ modalToggle, filterState , handleFilterState }) => {
 
 Navigation.propTypes = {
     modalToggle: PropTypes.func.isRequired,
-    filterState: PropTypes.func.isRequired,
+    filterState: PropTypes.bool.isRequired,
     handleFilterState: PropTypes.func.isRequired
 }
 

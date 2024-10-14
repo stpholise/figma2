@@ -475,6 +475,17 @@ input[type='date']::-webkit-calendar-picker-indicator{
 }
 
 
+.filterOverlay, .navOverlay{
+  position: fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0, 0,0.1);
+  z-index: 50;
+  top:0;
+  left:0;
+  display:block;
+}
+
 
 
 /* 930px */
@@ -486,7 +497,6 @@ input[type='date']::-webkit-calendar-picker-indicator{
 @media(max-width: 920px){
   body{
     overflow-x:hidden;
-    border:1px solid red;
   }
   .mNav{
     width:100%;
@@ -601,9 +611,7 @@ input[type='date']::-webkit-calendar-picker-indicator{
 }
 
 
-body{
-  border:1px solid green;
-}
+
 }
 
 

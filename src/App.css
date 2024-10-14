@@ -716,14 +716,14 @@ dialog{
 
 .filterCont{
   
-  height:90vh;
+  height:80vh;
   top:0;
   left:0%;
   right:0%;
   bottom: 0;
   transform:translate(-50% -50%);
   position:fixed;
-  margin-top:calc(100vh - 91vh);
+  margin-top:calc(100vh - 80vh);
   justify-content:flex-start;
   gap:1rem;
   overflow-y:scroll ;

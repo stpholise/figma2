@@ -598,14 +598,17 @@ input[type='date']::-webkit-calendar-picker-indicator{
 }
 
 .filterCont{
-  width:calc(100% - 2rem);
-  top:50%;
+  width:100%;
+  height:90vh;
+  top:0;
   left:0%;
   right:0%;
   bottom: 50%;
   transform:translate(-50% -50%);
   position:fixed;
-  width:calc(100vw - 1rem)
+  margin-top:calc(100vh - 90vh);
+  justify-content:flex-start;
+  gap:1rem;
 }
 
 
@@ -718,6 +721,43 @@ input[type='date']::-webkit-calendar-picker-indicator{
 .round{
   border-radius:50%;
   padding:5px;
+}
+
+.filterCont{
+  
+  height:90vh;
+  top:0;
+  left:0%;
+  right:0%;
+  bottom: 0;
+  transform:translate(-50% -50%);
+  position:fixed;
+  margin-top:calc(100vh - 90vh);
+  justify-content:flex-start;
+  gap:1rem;
+  overflow-y:scroll ;
+}
+
+.filterCont form{
+  width:100%;
+  margin-bottom:1rem;
+}
+
+.filterCont .modelFooter{
+  grid-template-columns:1fr ;
+}
+
+.filterCont .modelFooter .modelBtn{
+  border-radius:10px;
+}
+
+.filterCont .timeInt{
+  flex-wrap:wrap;
+  gap:0.5rem;
+}
+
+.expand{
+  display:none;
 }
 
 

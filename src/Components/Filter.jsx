@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 
 const Filter = ({setIsOpen, isOpen}) => {
 
-    const transactionTypes = ["Store transaction", "Get tipped", "Withdrawals", " Chargebacks", "Cashbacks", "Refer & Earn"]
+    
    
     const  [checkers, setCheckers ] = useState(false)
 
@@ -42,7 +42,7 @@ const Filter = ({setIsOpen, isOpen}) => {
 
     const [status, setStatus] = useState('')
 
-    const tStatus = ['Successful', 'Pending', 'Failed']
+    
     const handleStatus  = (e)=> {
         setStatus(e.target.value)
     }
@@ -91,7 +91,6 @@ const Filter = ({setIsOpen, isOpen}) => {
             </button>
         </div>
         <div className="timeInt">
-            
                 <button>Today</button>
                 <button>Yesterday</button>
                 <button>Last 7 days</button>
@@ -107,9 +106,9 @@ const Filter = ({setIsOpen, isOpen}) => {
 
                     <label htmlFor="startDate" className='hideLabel'>start date</label>
                     <input type="date" id='starDate' style={{padding:'0.5rem'}}/>
-                    {openDate ? <img src={ExpandLess} alt='expand'/> 
+                    {openDate ? <img src={ExpandLess} alt='expand' className='expand'/> 
                     : 
-                    <img src={ExpandMore} alt='expand'/> 
+                    <img src={ExpandMore} alt='expand' className='expand'/> 
                     }     
                     
                     
@@ -118,9 +117,9 @@ const Filter = ({setIsOpen, isOpen}) => {
                     <div className="finish dateBox" >
                      <label   htmlFor="finishDate" className='hideLabel'>finishDate</label>
                      <input  onClick={handleDate1} type="date" id='finishDate' style={{padding:'0.5rem'}}/>
-                     {openDate1 ? <img src={ExpandLess} alt='expand'/> 
+                     {openDate1 ? <img src={ExpandLess} alt='expand'className='expand'/> 
                     : 
-                    <img src={ExpandMore} alt='expand'/> 
+                    <img src={ExpandMore} alt='expand'className='expand'/> 
                     }     
                     </div>
                 </div>
@@ -135,9 +134,7 @@ const Filter = ({setIsOpen, isOpen}) => {
                
   <button className="btnTTl" onClick={handleCheckers} type="button">
   <span className='btnLft'>
-    {transactionTypes.map((item, index) => (
-      <span key={index}>{item}</span>
-    ))}
+        Select Transaction Type
   </span>
   
   {checkers ? <img src={ExpandLess} alt='expand'/> : <img src={ExpandMore} alt='expand'/>}
@@ -171,9 +168,7 @@ const Filter = ({setIsOpen, isOpen}) => {
                               
                     <button className="btnTTl" onClick={handleRadio} type="button">
                     <span className='btnLft'>
-                        {tStatus.map((item, index) => (
-                        <span key={index}>{item}</span>
-                        ))}
+                      Select Transaction Status
                     </span>
                     
                     {openRadio ? <img src={ExpandLess} alt='expand'/> : <img src={ExpandMore} alt='expand'/>}

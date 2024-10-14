@@ -3,6 +3,7 @@ import Close from '../assets/close.svg'
 import ExpandMore from '../assets/expand_more.svg'
 import ExpandLess from '../assets/expand_less.svg'
 import PropTypes from 'prop-types'
+// import { nominalTypeHack } from 'prop-types'
 
 
 
@@ -105,10 +106,10 @@ const Filter = ({setIsOpen, isOpen}) => {
                     <div className="start dateBox" onClick={handleDate}>
 
                     <label htmlFor="startDate" className='hideLabel'>start date</label>
-                    <input type="date" id='starDate' style={{padding:'0.5rem'}}/>
-                    {openDate ? <img src={ExpandLess} alt='expand' className='expand'/> 
+                    <input type="date" id='starDate' />
+                    {openDate ? <img src={ExpandLess} alt='expand' style={{display:'none'}}/> 
                     : 
-                    <img src={ExpandMore} alt='expand' className='expand'/> 
+                    <img src={ExpandMore} alt='expand' className='expand' style={{display:'none'}}/> 
                     }     
                     
                     
@@ -117,9 +118,9 @@ const Filter = ({setIsOpen, isOpen}) => {
                     <div className="finish dateBox" >
                      <label   htmlFor="finishDate" className='hideLabel'>finishDate</label>
                      <input  onClick={handleDate1} type="date" id='finishDate' style={{padding:'0.5rem'}}/>
-                     {openDate1 ? <img src={ExpandLess} alt='expand'className='expand'/> 
+                     {openDate1 ? <img src={ExpandLess} alt='expand' style={{display:'none'}}/> 
                     : 
-                    <img src={ExpandMore} alt='expand'className='expand'/> 
+                    <img src={ExpandMore} alt='expand'className='expand' style={{display:'none'}}/> 
                     }     
                     </div>
                 </div>
@@ -171,7 +172,7 @@ const Filter = ({setIsOpen, isOpen}) => {
                       Select Transaction Status
                     </span>
                     
-                    {openRadio ? <img src={ExpandLess} alt='expand'/> : <img src={ExpandMore} alt='expand'/>}
+                    {openRadio ? <img src={ExpandLess} alt='expand' /> : <img src={ExpandMore} alt='expand'/>}
                     </button>
                     {openRadio &&
                     <div className="checkCont">

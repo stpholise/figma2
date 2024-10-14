@@ -29,14 +29,13 @@ const Filter = ({setIsOpen, isOpen}) => {
         checkers && setCheckers(false)
     }
 
-    const [openDate, setOpenDate] = useState(false)
-    const [openDate1, setOpenDate1] = useState(false)
+
 
     const handleDate = () => {
-        setOpenDate(!openDate)
+        
     }
     const handleDate1 = () => {
-        setOpenDate1(!openDate1)
+       
     }
 
     const [checkedItems, setCheckedItems] = useState({})
@@ -107,21 +106,14 @@ const Filter = ({setIsOpen, isOpen}) => {
 
                     <label htmlFor="startDate" className='hideLabel'>start date</label>
                     <input type="date" id='starDate' />
-                    {openDate ? <img src={ExpandLess} alt='expand' style={{display:'none'}}/> 
-                    : 
-                    <img src={ExpandMore} alt='expand' className='expand' style={{display:'none'}}/> 
-                    }     
-                    
+                
                     
 
                     </div>
                     <div className="finish dateBox" >
                      <label   htmlFor="finishDate" className='hideLabel'>finishDate</label>
                      <input  onClick={handleDate1} type="date" id='finishDate' style={{padding:'0.5rem'}}/>
-                     {openDate1 ? <img src={ExpandLess} alt='expand' style={{display:'none'}}/> 
-                    : 
-                    <img src={ExpandMore} alt='expand'className='expand' style={{display:'none'}}/> 
-                    }     
+                      
                     </div>
                 </div>
             </div>

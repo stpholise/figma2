@@ -414,8 +414,9 @@ input[type='date']::-webkit-calendar-picker-indicator{
   border-radius:var(--round-btn);
   padding:0.3rem 1rem;
   background:#eff1f6;
-
 }
+
+
 
 .checkLabel{
   padding:0 1rem;
@@ -757,6 +758,20 @@ input[type='date']::-webkit-calendar-picker-indicator{
   flex-wrap:wrap;
   gap:0.5rem;
 }
+
+input[type='date']::-webkit-calendar-picker-indicator{
+  opacity: 1;
+  cursor: pointer; 
+  position: relative; 
+  width:auto;
+  height:auto;
+  background:#eff1f6;
+  top: auto;
+  left: auto;
+  right:auto;
+  -webkit-appearance: default;
+} 
+
 
 .expand{
   display:none;

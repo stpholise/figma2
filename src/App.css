@@ -250,13 +250,21 @@ h1, h2, h3{
   padding:1rem 5rem;
 
 }
+
 .transactionCont{
   padding:1rem 5rem;
 }
 
+.midSec .midRht{
+  display:flex;
+ padding:0.5rem;
+}
+
 .midRht button{
-  padding:0;
-  display:inline-block;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.5rem;
   border-radius:100px;
   background:#eff1f6;
   color:#333;
@@ -696,7 +704,12 @@ dialog{
 .transactionCont{
   padding:1rem 10px;
 }
-  
+.midSec .midRht{
+  width:100%;
+ 
+  justify-content:center;
+  align-items:center;
+}
 
 
 .block {

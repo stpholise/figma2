@@ -387,7 +387,7 @@ dialog{
 .dateFm input[type="date"]{
   border:none;
   outline:none;
-  padding:1rem;
+  padding:0.5rem 1rem;
   border-radius:12px;
   background:transparent;
   width:100%; 
@@ -743,12 +743,15 @@ dialog{
 
 .dateBox{
   border-radius:7px;
+  padding:0.4rem;
 }
 
 .filterCont .modelFooter{
   grid-template-columns:1fr ;
   position:fixed;
+  width:70vw;
   bottom:1rem;
+  margin:auto;
 }
 
 .filterCont .modelFooter .modelBtn{
@@ -759,6 +762,11 @@ dialog{
   flex-wrap:wrap;
   justify-content: flex-start;
   gap:0.2rem;
+}
+
+.timeInt button {
+  border-radius:7px;
+  width:auto;
 }
 
 
@@ -791,21 +799,13 @@ dialog{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.2rem 0.5rem;
     background: #eff1f6;
     border-radius:0.4rem;
 }
 
-.dateFm input[type="date"] {
-  
-  padding: 1rem;
-  
-}
 
-.filterCont .timeInt{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-}
+
+
 form{
   padding:0.6rem 0;
 }
